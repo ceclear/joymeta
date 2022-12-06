@@ -66,6 +66,11 @@
             ll = layui.layer;
         });
         $(function () {
+            $(window).keydown(function (e){
+                if(e.keyCode==13){
+                    $('#btn_submit').click();
+                }
+            })
             $('#btn_submit').click(function () {
                 // var ee = document.getElementsByClassName('err_span');
                 // var bb = document.getElementsByClassName('input-lg');
