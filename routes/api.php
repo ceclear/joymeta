@@ -55,6 +55,12 @@ Route::group(['namespace' => 'Api', 'middleware' => ['user']], function () {
 
     Route::get('village/marker', 'VillageController@markerList');//用户村庄列表
     Route::get('village/get-discover', 'VillageController@getDiscover');//村庄图片资料
+    //u3d
+    Route::prefix('u3d-server')->group(function ($router) {
+
+        $router->get('qry-log-server', 'U3dController@queryLoginServer');//获取登录服信息
+//        $router->get('qry-log-token', 'U3dController@queryLoginToken');//获取登录服token
+    });
 
 });
 
@@ -146,7 +152,7 @@ Route::group(['namespace' => 'Api', 'middleware' => ['user.auth']], function () 
 });
 
 Route::namespace('Api')->prefix('server')->group(function ($router) {
-    $router->get('index', 'HuaYangController@index');
+    $router->post('index', 'LoginServerController@index');
 //    $router->post('sendGameServer', 'HuaYangController@sendGameServer');
-//    $router->post('test', 'HuaYangController@testSign');
 });
+

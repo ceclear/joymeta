@@ -39,6 +39,6 @@ Route::post('/oss/callback/put', 'Api\UploadController@ossPutObjCallback');
 
 Route::any('/api/uploadTest', 'Api\UploadController@test');
 
-//Route::get('/aliasPush', 'Api\JpushController@aliasPush');
+//Route::get('/aliasPush', 'Api\JpushController@aliasPush');//取消此功能
 
 
