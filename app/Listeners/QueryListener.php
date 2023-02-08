@@ -24,12 +24,12 @@ class QueryListener
     /**
      * Handle the event.
      *
-     * @param  QueryExecuted  $event
+     * @param QueryExecuted $event
      * @return void
      */
     public function handle(QueryExecuted $event)
     {
-        try{
+        try {
             if (config('app.debug') === true) {
                 $sql = str_replace("?", "'%s'", $event->sql);
                 foreach ($event->bindings as $i => $binding) {
@@ -42,11 +42,11 @@ class QueryListener
                     }
                 }
                 $log = vsprintf($sql, $event->bindings);
-                $log = $log.'  [ RunTime:'.$event->time.'ms ] ';
+                $log = $log . '  [ RunTime:' . $event->time . 'ms ] ';
                 (new Logger('sql'))->pushHandler(new RotatingFileHandler(storage_path('logs/sql/sql.log')))->info($log);
             }
-        }catch (\Exception $exception){
-            Log::error('log sql error:'.$exception->getMessage());
+        } catch (\Exception $exception) {
+            Log::error('log sql error:' . $exception->getMessage());
         }
     }
 }
