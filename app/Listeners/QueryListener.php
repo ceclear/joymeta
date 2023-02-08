@@ -30,7 +30,7 @@ class QueryListener
     public function handle(QueryExecuted $event)
     {
         try{
-            if (env('APP_DEBUG') == true) {
+            if (config('app.debug') === true) {
                 $sql = str_replace("?", "'%s'", $event->sql);
                 foreach ($event->bindings as $i => $binding) {
                     if ($binding instanceof \DateTime) {
