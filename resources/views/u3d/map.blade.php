@@ -204,7 +204,7 @@
 
 <script type="text/javascript">
     window._AMapSecurityConfig = {
-        securityJsCode: 'e33af5c2830fbce26dbdbd104c92ca7e',
+        serviceHost:'https://www.joy-meta.com/_AMapService',
     }
 </script>
 <script type="text/javascript"
