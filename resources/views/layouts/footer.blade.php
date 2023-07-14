@@ -3,7 +3,7 @@
 <div class="footer" style="color: white">
     <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
         <p class="copyright">Copyright &copy; {{date('Y')}} 玩出花漾（深圳）科技有限公司 All rights reserved<a
-                style="margin-left: 20px;color: white" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/recordQuery">粤ICP备2021109474号-1</a>
+                style="margin-left: 20px;color: white" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/recordQuery">粤ICP备2021109474号-3</a>
         </p>
     </div>
 </div>
