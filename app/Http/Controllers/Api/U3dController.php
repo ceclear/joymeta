@@ -87,4 +87,9 @@ class U3dController extends BaseController
         return $this->responseJson(0, Lang::get("response.success"), $data);
     }
 
+    public function setWebStatus()
+    {
+        return $this->responseJson(0, Lang::get("response.success"), true);
+    }
+
 }

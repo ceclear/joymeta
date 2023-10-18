@@ -42,7 +42,7 @@ Route::group(['namespace' => 'Api'], function () {
 //    Route::post('/message/validate', 'MessageController@validateCode');//验证验证码
 
     Route::group(['prefix' => 'platform'], function ($router) {
-
+        $router->get('set-web-status', 'U3dController@setWebStatus');//设置网站开关
     });
 });
 
