@@ -67,7 +67,7 @@ class U3dController extends BaseController
             '_action' => 'sysGMCmd',
             '_time'   => $time,
             '_sign'   => md5(GlobalConstant::SERVER_KEY . $time),
-            '_data'   => json_encode(['key1' => 111]),
+            '_data'   => json_encode(['key1' => 222]),
         ];
         $apiRequest = new ApiRequestServer();
         $rel        = $apiRequest->sendRequest($sendParam);
